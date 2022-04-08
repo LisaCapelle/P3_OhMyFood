@@ -1,0 +1,24 @@
+{
+  "name": "p3_ohmyfood",
+  "version": "1.0.0",
+  "description": "project3",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss :.css/style.css --style expanded",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d./css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LisaCapelle/P3_OhMyFood.git"
+  },
+  "author": "Lisa Capelle",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/LisaCapelle/P3_OhMyFood/issues"
+  },
+  "homepage": "https://github.com/LisaCapelle/P3_OhMyFood#readme"
+}
