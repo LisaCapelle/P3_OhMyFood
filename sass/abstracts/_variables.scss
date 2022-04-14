@@ -3,4 +3,73 @@
 $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
+$colour-darkbkgrdfont:#fff;
+$typography-titles: font-family 'Shrikhand', cursive;
+$typography-else: font-family 'Roboto', sans-serif;
+.display-row {display:flex; align-items:center; justify-content: space-evenly;}
+.display-column{display:flex; flex-direction:column;align-items:center; justify-content: space-between;}
 
+// ALL 
+*{
+    width: 350px;
+    margin: auto;
+    padding:0;
+    flex-wrap:wrap;}
+    // box-sizing: border-box;}
+h2{
+    font-family: 'Roboto', sans-serif;
+        font-size: 15px;}
+
+// HEADER 
+header{
+    margin:auto;
+    padding-bottom: 10px;}
+
+// LOCALIZATION
+.localization{
+    display:flex; 
+    align-items:center;
+    padding-bottom: 20px;
+    background:rgb(231, 224, 224);}
+
+.call-to-action{
+display:flex; justify-content:center;
+padding-bottom: 10px;
+    &__p{color:$colour-tertiary;}};
+
+.btn-explore{
+    display:flex;
+    width: 180px;
+    justify-content:center;
+    padding:5px;
+    margin:10px;
+    background:$colour-primary;
+    border-radius:20px;
+    color:$colour-darkbkgrdfont;}
+
+.number{border-radius:10px; 
+        background:$colour-primary;
+        font-size:10px;
+        width:18px;
+        padding: 3px;
+        color:$colour-darkbkgrdfont;
+    }
+
+.list__steps{display:flex;}
+.steps-btn{
+    display:flex;
+}
+
+
+
+// Typography 
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+i, p {
+font-size: 10px;
+}
+
+// @mixin typography ($typography-titles) {
+//   @if $typography-titles{font-family: 'Shrikhand', cursive;
+//   } @else {font-family: 'Roboto', sans-serif;}

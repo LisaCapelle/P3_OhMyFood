@@ -1,22 +1,2 @@
 
 
-* {
-    box-sizing: border-box;
-  }
-
-// Variables 
-$colour-primary: #9356DC;
-$colour-secondary: #FF79DA;
-$colour-tertiary: #99E2D0;
-
-// Typography 
-html, body {
-    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");}
-
-$logo-size:(homepage:1rem, menu:.7rem);
-
-h2{
-    font-family: 'Roboto', sans-serif;
-    font-size: 50px;
-    background-color:$colour-secondary;
-}

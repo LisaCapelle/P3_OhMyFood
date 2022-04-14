@@ -1,3 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+.display-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.display-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* {
+  width: 350px;
+  margin: auto;
+  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+header {
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.localization {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+  background: #e7e0e0;
+}
+
+.call-to-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 10px;
+}
+
+.call-to-action__p {
+  color: #99E2D0;
+}
+
+.btn-explore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 180px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px;
+  margin: 10px;
+  background: #9356DC;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.number {
+  border-radius: 10px;
+  background: #9356DC;
+  font-size: 10px;
+  width: 18px;
+  padding: 3px;
+  color: #fff;
+}
+
+.list__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.steps-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+i, p {
+  font-size: 10px;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -5,8 +118,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -346,25 +457,5 @@ template {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 5px;
-  background-color: #FF79DA;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html, body {
-}
-
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 50px;
-  background-color: #FF79DA;
 }
 /*# sourceMappingURL=main.css.map */
