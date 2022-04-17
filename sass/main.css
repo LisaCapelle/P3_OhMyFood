@@ -356,6 +356,19 @@ h2 {
   padding: 10px 0 15px 10px;
 }
 
+h3 {
+  font-size: 17px;
+  font-weight: 700;
+  padding-left: 10px;
+  margin: 2px;
+}
+
+h4 {
+  font-size: 15px;
+  padding-left: 10px;
+  margin: 2px;
+}
+
 p {
   font-size: 13px;
 }
@@ -384,7 +397,6 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-right: 60px;
 }
 
 footer {
@@ -428,6 +440,10 @@ footer {
 #bloc-page {
   max-width: 350px;
   margin: auto;
+}
+
+.return-icon {
+  display: none;
 }
 
 .location {
@@ -551,6 +567,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background-color: #f6f6f6;
 }
 
@@ -562,6 +581,11 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card__img {
@@ -575,17 +599,33 @@ footer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  width: 90%;
-  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  width: 320px;
+  height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px;
+  z-index: 1;
 }
 
 .card__description {
+  width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 3;
+  border-radius: 0  0 20px 20px;
+  background-color: #fff;
 }
 
 .restaurant__description {
@@ -596,6 +636,40 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.new {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 7px;
+  background-color: #99E2D0;
+  color: #278870;
+  position: relative;
+  z-index: 2;
+  margin: -120px 0 20px 230px;
+}
+
+#bloc-page {
+  max-width: 350px;
+  margin: auto;
+}
+
+.return-icon {
+  display: display;
+}
+
+.sub-header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sub-header__img {
+  width: 350px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .title {
