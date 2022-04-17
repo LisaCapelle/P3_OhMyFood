@@ -1,5 +1,9 @@
 
-// MIXINS 
+// MIXINS
+@mixin text-colour ($colour:$colour-font-on-dark-bg,) {
+    @if (lightness($colour)<25%){$colour:$colour-font-on-light-bg;}
+    @else {color:colour-font-on-light-bg;}
+}
 
 
 

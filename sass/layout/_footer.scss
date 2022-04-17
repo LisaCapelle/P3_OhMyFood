@@ -1,5 +1,25 @@
 
-// MIXINS 
+// FOOTER
+
+footer{
+    background-color: nth($background-colour,4);
+    color:$colour-darkbkgrdfont;}
+.footer__logo{
+        font-size:15px;
+        padding:20px;}
+
+.footer__list{
+    display:flex; 
+    flex-direction:column;
+        &-link{
+        padding:0 0 5px 20px;
+            display:flex;
+        flex-direction:row;
+        align-items:baseline;
+        justify-content:left;
+        color:$colour-darkbkgrdfont;}    
+}
+
 
 
 
