@@ -360,6 +360,10 @@ p {
   font-size: 13px;
 }
 
+:link {
+  text-decoration: none;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -436,12 +440,14 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: 0 0 3px -1px #535151;
+          box-shadow: 0 0 3px -1px #535151;
   background-color: #eaeaea;
 }
 
 .location__icon {
   font-size: 15px;
-  padding-right: 10px;
+  padding-right: 30px;
 }
 
 .location__name {
@@ -473,9 +479,26 @@ footer {
   padding-bottom: 0;
 }
 
-.call-to-action p {
+.call-to-action__p {
   max-width: 250px;
   text-align: center;
+}
+
+.btn-explore {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #9356DC;
+  color: #fff;
+}
+
+#steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .list__steps {
@@ -489,20 +512,24 @@ footer {
   list-style: none;
 }
 
+.icon--screen, .icon--list, .icon--store {
+  padding: 10px;
+}
+
 .btn {
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding: 1px;
-  margin: 1px;
+  -webkit-box-pack: first baseline;
+      -ms-flex-pack: first baseline;
+          justify-content: first baseline;
+  margin: 0 0 10px 20px;
   border-radius: 20px;
-  color: #fff;
+  background-color: #f6f6f6;
 }
 
 .number {
@@ -510,7 +537,9 @@ footer {
   background: #9356DC;
   font-size: 10px;
   width: 12px;
-  padding: 2px;
+  position: relative;
+  padding: 3px 0 1px 4px;
+  margin-left: -5px;
   color: #fff;
 }
 
@@ -522,6 +551,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #f6f6f6;
 }
 
 .restaurant__card {
@@ -532,7 +562,6 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 350px;
 }
 
 .card__img {
@@ -543,7 +572,11 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-height: 100px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 90%;
+  height: 50px;
   -o-object-fit: cover;
      object-fit: cover;
 }

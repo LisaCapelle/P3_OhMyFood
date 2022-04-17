@@ -8,7 +8,7 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    border: 2px black solid;
+    box-shadow: 0 0 3px -1px nth($background-colour,5);
     background-color: nth($background-colour,2);
         &__icon
             {font-size:15px;
@@ -30,48 +30,64 @@
         margin-bottom:0;
         padding-bottom:0;}
 
-.call-to-action p {
+.call-to-action__p{
         max-width:250px; 
         text-align:center;}
 
 .btn-explore{
     padding: 10px;
-    border-radius: 10px;
-}
+    border-radius: 20px;
+    background-color: $colour-primary;
+    color:$colour-font-on-dark-bg;}
 
-.list__steps
-    {display:flex;
+#steps{
+    display:flex;
+    flex-direction:column;}
+
+.list__steps    {
+    display:flex;
     flex-direction:column;
     list-style:none;}
 
+.icon{
+    &--screen, &--list, &--store {padding:10px;}
+}
+
 .btn{
+    width:80%;
     display:flex;
     align-items:center;
-    justify-content:flex-start;
-    padding:1px;
-    margin:1px;
-    border-radius:20px;}
+    justify-content:first baseline;
+    margin:0 0 10px 20px;
+    border-radius:20px;
+    background-color: nth($background-colour,1);}
 
 .number{border-radius:10px; 
         background:$colour-primary;
         font-size:10px;
         width:12px;
-        padding:2px;
-        @include text-colour;}
+        position: relative;
+        padding:3px 0 1px 4px;
+        margin-left:-5px;
+        color:$colour-font-on-dark-bg;
+        // @include text-colour;
+    }
 
 #restaurants__cards{
     display:flex;
-    flex-direction:column;}
+    flex-direction:column;
+    background-color:nth($background-colour,1);}
 
 .restaurant__card{
     display:flex;
-    flex-direction:column;
-    height:350px;}
+    flex-direction:column;}
 
 .card__img{
     display:flex;
     flex-direction:column;
-    max-height:100px;
+    justify-content:space-evenly;
+    width:90%;
+    height:50px;
     object-fit:cover;}
 
 .card__description{
