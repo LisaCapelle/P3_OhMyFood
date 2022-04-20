@@ -353,7 +353,7 @@ h2, p {
 
 h2 {
   font-size: 16px;
-  padding: 10px 0 15px 10px;
+  padding: 15px 0 0 10px;
 }
 
 h3 {
@@ -373,8 +373,24 @@ p {
   font-size: 13px;
 }
 
-:link {
+a:link {
   text-decoration: none;
+  color: #fff, black, 2;
+}
+
+a:active {
+  text-decoration: none;
+  color: #fff, black, 2;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #fff, black, 2;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff, black, 2;
 }
 
 header {
@@ -402,6 +418,7 @@ header {
 footer {
   background-color: #353535;
   color: #fff;
+  padding-bottom: 10px;
 }
 
 .footer__logo {
@@ -409,7 +426,12 @@ footer {
   padding: 20px;
 }
 
+.footer__icon {
+  padding: 0 10px 0 0;
+}
+
 .footer__list {
+  padding-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,22 +441,33 @@ footer {
           flex-direction: column;
 }
 
+.footer__list a:link {
+  color: white;
+}
+
+.footer__list a:hover {
+  color: white;
+}
+
+.footer__list a:active {
+  color: white;
+}
+
+.footer__list a:visited {
+  color: white;
+}
+
 .footer__list-link {
-  padding: 0 0 5px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
 }
 
 #bloc-page {
@@ -456,9 +489,8 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 0 0 3px -1px #535151;
-          box-shadow: 0 0 3px -1px #535151;
-  background-color: #eaeaea;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #d1d1d1), color-stop(98%, #eaeaea));
+  background: linear-gradient(to bottom, #d1d1d1 2%, #eaeaea 98%);
 }
 
 .location__icon {
@@ -503,7 +535,8 @@ footer {
 .btn-explore {
   padding: 10px;
   border-radius: 20px;
-  background-color: #9356DC;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
   color: #fff;
 }
 
@@ -532,6 +565,10 @@ footer {
   padding: 10px;
 }
 
+.icon--screen, .icon--list {
+  color: #666666;
+}
+
 .btn {
   width: 80%;
   display: -webkit-box;
@@ -544,8 +581,11 @@ footer {
       -ms-flex-pack: first baseline;
           justify-content: first baseline;
   margin: 0 0 10px 20px;
-  border-radius: 20px;
+  padding: 10px 0;
+  border-radius: 15px;
   background-color: #f6f6f6;
+  -webkit-box-shadow: 2px 5px 5px #dddddd;
+          box-shadow: 2px 5px 5px #dddddd;
 }
 
 .number {
@@ -570,6 +610,8 @@ footer {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  padding-left: 15px;
+  padding-bottom: 30px;
   background-color: #f6f6f6;
 }
 
@@ -581,11 +623,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 10px;
 }
 
 .card__img {
@@ -608,8 +646,7 @@ footer {
   height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 20px;
-  z-index: 1;
+  border-radius: 15px 15px 0 0;
 }
 
 .card__description {
@@ -623,8 +660,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 3;
-  border-radius: 0  0 20px 20px;
+  border-radius: 0  0 15px 15px;
   background-color: #fff;
 }
 
@@ -636,6 +672,8 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .new {
@@ -646,8 +684,23 @@ footer {
   background-color: #99E2D0;
   color: #278870;
   position: relative;
-  z-index: 2;
-  margin: -120px 0 20px 230px;
+  top: 40px;
+  left: 220px;
+}
+
+.like {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.like--solid {
+  position: relative;
+  top: -10px;
+}
+
+.like--regular {
+  position: relative;
+  top: 10px;
 }
 
 #bloc-page {

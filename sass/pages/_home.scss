@@ -12,8 +12,7 @@ display:none;}
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow: 0 0 3px -1px nth($background-colour,5);
-    background-color: nth($background-colour,2);
+    background: linear-gradient(to bottom, darken(nth($background-colour,2),10%) 2%, nth($background-colour,2) 98%);
         &__icon
             {font-size:15px;
             padding-right:30px;};
@@ -41,7 +40,7 @@ display:none;}
 .btn-explore{
     padding: 10px;
     border-radius: 20px;
-    background-color: $colour-primary;
+    background: linear-gradient($colour-secondary, $colour-primary);
     color:$colour-font-on-dark-bg;}
 
 #steps{
@@ -55,6 +54,7 @@ display:none;}
 
 .icon{
     &--screen, &--list, &--store {padding:10px;}
+    &--screen, &--list {color:lighten($colour-font-on-light-bg,40%)}
 }
 
 .btn{
@@ -63,8 +63,10 @@ display:none;}
     align-items:center;
     justify-content:first baseline;
     margin:0 0 10px 20px;
-    border-radius:20px;
-    background-color: nth($background-colour,1);}
+    padding: 10px 0;
+    border-radius:15px;
+    background-color: nth($background-colour,1);
+    box-shadow: 2px 5px 5px darken(nth($background-colour,1),10%);}
 
 .number{border-radius:10px; 
         background:$colour-primary;
@@ -81,15 +83,15 @@ display:none;}
     display:flex;
     flex-direction:column;
     align-items:flex-start;
+    padding-left:15px;
+    padding-bottom:30px;
     background-color:nth($background-colour,1);}
 
 .restaurant__card{
     display:flex;
     flex-direction:column;
-    justify-content:flex-end;
-    margin-left:auto;
-    margin-right:auto;
-        }
+    margin-bottom:10px;
+    }
 
 .card__img{
     display:flex;
@@ -101,21 +103,21 @@ display:none;}
 .image{width:320px;
     height:180px;
     object-fit:cover;
-    border-radius:20px;
-    z-index:1;}
+    border-radius:15px 15px 0 0;}
 
 .card__description{
     width:320px;
     display:flex;
     justify-content: space-between;
     align-items:center;
-    z-index:3;
-    border-radius:0  0 20px 20px;
+    
+    border-radius:0  0 15px 15px;
     background-color: #fff;    }
 
 .restaurant__description{
     display:flex; 
-    flex-direction:column;}
+    flex-direction:column;
+justify-content:space-around;}
 
 .new{
     width:fit-content;
@@ -123,6 +125,12 @@ display:none;}
     background-color: $colour-tertiary;
     color:darken($colour-tertiary,40%);
     position:relative;
-    z-index:2;
-    margin: -120px 0 20px 230px;
+    top:40px;
+    left:220px;}
+
+.like{
+    padding-right:20px;
+    cursor: pointer;
+    &--solid{position:relative; top:-10px;}
+    &--regular{position:relative; top: 10px;}
 }

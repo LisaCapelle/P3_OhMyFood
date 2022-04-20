@@ -3,21 +3,28 @@
 
 footer{
     background-color: nth($background-colour,4);
-    color:$colour-font-on-dark-bg;}
+    color:$colour-font-on-dark-bg;
+    padding-bottom:10px;}
 .footer__logo{
         font-size:15px;
         padding:20px;}
 
+.footer__icon{
+    padding:0 10px 0 0;}
+
 .footer__list{
+    padding-left:20px;
     display:flex; 
     flex-direction:column;
+    a:link {color:white;};
+    a:hover{color:white;};
+    a:active{color:white;};
+    a:visited{color:white;};
         &-link{
-        padding:0 0 5px 20px;
         display:flex;
-        flex-direction:row;
-        align-items:baseline;
-        justify-content:left;
-        color:$colour-font-on-dark-bg;}    
+        align-items:center;
+        justify-content:flex-start;
+        padding:0;}
 }
 
 
