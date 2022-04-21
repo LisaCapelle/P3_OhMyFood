@@ -4,29 +4,23 @@
 footer{
     background-color: nth($background-colour,4);
     color:$colour-font-on-dark-bg;
-    padding-bottom:10px;}
+    padding:20px;}
 .footer__logo{
-        font-size:15px;
-        padding:20px;}
+        font-size:15px;}
 
 .footer__icon{
     padding:0 10px 0 0;}
 
 .footer__list{
-    padding-left:20px;
     display:flex; 
     flex-direction:column;
+    line-height:0%;
+    padding:0;
     a:link {color:white;};
     a:hover{color:white;};
     a:active{color:white;};
     a:visited{color:white;};
         &-link{
         display:flex;
-        align-items:center;
-        justify-content:flex-start;
         padding:0;}
 }
-
-
-
-

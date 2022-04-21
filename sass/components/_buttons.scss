@@ -1,5 +1,12 @@
 
 // BUTTONS 
 
-
+.like{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding-right:30px;
+    cursor: pointer;
+    &--regular{font-size:20px;position:absolute;top:20px;}
+    &--solid{font-size:20px;position:absolute;top:20px;}}
 
