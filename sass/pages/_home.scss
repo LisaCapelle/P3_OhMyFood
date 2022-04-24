@@ -79,8 +79,7 @@
 .restaurant__card{
     display:flex;
     flex-direction:column;
-    margin-bottom:10px;
-    }
+    margin-bottom:15px;}
 
 .card__img{
     display:flex;
@@ -88,18 +87,20 @@
     justify-content:space-evenly;
     position:relative;}
 
-.image{width:320px;
+.image{width:300px;
     height:180px;
     object-fit:cover;
     border-radius:15px 15px 0 0;}
 
 .card__description{
-    width:320px;
+    width:300px;
     display:flex;
     justify-content: space-between;
     position:relative;
     border-radius:0  0 15px 15px;
-    background-color: #fff;    
+    padding: 5px 0;
+    background-color: #fff;
+    box-shadow: 2px 5px 5px darken(nth($background-colour,1),10%);    
     &.like{
         &--regular{font-size:20px;position:absolute;}
         &--solid{font-size:20px;position:absolute;}
@@ -116,9 +117,13 @@ justify-content:space-around;}
     padding:4px 7px;
     background-color: $colour-tertiary;
     color:darken($colour-tertiary,40%);
-    font-weight:bold;
+    font-weight:700;
     font-size:12px;
     position:absolute;
     top:15px;
     right:15px;}
 
+    .footer__list-link {
+        span{font-weight:100;}
+        > p{font-weight:100;}
+    }

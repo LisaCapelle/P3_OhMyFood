@@ -9,7 +9,7 @@
 
 
 .btn-step{
-    width:250px;
+    width:280px;
     display:flex;
     text-align: center;
     margin-bottom:15px;
@@ -26,7 +26,7 @@
     padding-right:30px;
     cursor: pointer;
     &--regular{font-size:20px;position:absolute;}
-    &--solid{font-size:20px;position:absolute;}}
+    &--solid{font-size:20px;position:absolute; color:$colour-primary;}}
 
 .return-icon{
     color:lighten($colour-font-on-light-bg,20%);}

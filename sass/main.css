@@ -9,24 +9,25 @@ h2, h3, h4, p, ul, li, i, span {
 }
 
 .home-page h2 {
-  font-size: 16px;
+  font-size: 18px;
   align-self: baseline;
   padding-left: 20px;
 }
 .home-page h3 {
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
   padding-left: 10px;
   margin: 2px;
 }
 .home-page h4 {
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 400;
   padding-left: 10px;
   margin: 2px;
 }
 .home-page p, .home-page span {
   font-size: 13px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .menu-page h2 {
@@ -63,22 +64,22 @@ p {
 
 a:link {
   text-decoration: none;
-  color: #fff, black, 2;
+  color: black;
 }
 
 a:active {
   text-decoration: none;
-  color: #fff, black, 2;
+  color: black;
 }
 
 a:visited {
   text-decoration: none;
-  color: #fff, black, 2;
+  color: black;
 }
 
 a:hover {
   text-decoration: none;
-  color: #fff, black, 2;
+  color: black;
 }
 
 .btn-action {
@@ -90,7 +91,7 @@ a:hover {
 }
 
 .btn-step {
-  width: 250px;
+  width: 280px;
   display: flex;
   text-align: center;
   margin-bottom: 15px;
@@ -114,6 +115,7 @@ a:hover {
 .like--solid {
   font-size: 20px;
   position: absolute;
+  color: #9356DC;
 }
 
 .return-icon {
@@ -260,7 +262,7 @@ footer.p {
 .restaurant__card {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .card__img {
@@ -271,7 +273,7 @@ footer.p {
 }
 
 .image {
-  width: 320px;
+  width: 300px;
   height: 180px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -279,12 +281,14 @@ footer.p {
 }
 
 .card__description {
-  width: 320px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
   position: relative;
   border-radius: 0 0 15px 15px;
+  padding: 5px 0;
   background-color: #fff;
+  box-shadow: 2px 5px 5px #dddddd;
 }
 .card__description.like--regular {
   font-size: 20px;
@@ -308,11 +312,18 @@ footer.p {
   padding: 4px 7px;
   background-color: #99E2D0;
   color: #278870;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 12px;
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.footer__list-link span {
+  font-weight: 100;
+}
+.footer__list-link > p {
+  font-weight: 100;
 }
 
 .menu-page {
