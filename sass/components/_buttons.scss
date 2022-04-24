@@ -1,5 +1,23 @@
 
 // BUTTONS 
+.btn-action{
+    padding: 10px;
+    border-radius: 20px;
+    background: linear-gradient($colour-secondary, $colour-primary);
+    color:$colour-font-on-dark-bg;
+    box-shadow: 2px 2px 3px 1px darken(nth($background-colour,2),10%);}
+
+
+.btn-step{
+    width:250px;
+    display:flex;
+    text-align: center;
+    margin-bottom:15px;
+    position:relative;
+    border-radius:20px;
+    background-color: nth($background-colour,1);
+    box-shadow: 2px 5px 5px darken(nth($background-colour,1),10%);
+    }
 
 .like{
     display:flex;
@@ -7,6 +25,8 @@
     justify-content:center;
     padding-right:30px;
     cursor: pointer;
-    &--regular{font-size:20px;position:absolute;top:20px;}
-    &--solid{font-size:20px;position:absolute;top:20px;}}
+    &--regular{font-size:20px;position:absolute;}
+    &--solid{font-size:20px;position:absolute;}}
 
+.return-icon{
+    color:lighten($colour-font-on-light-bg,20%);}

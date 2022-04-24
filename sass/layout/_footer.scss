@@ -4,7 +4,8 @@
 footer{
     background-color: nth($background-colour,4);
     color:$colour-font-on-dark-bg;
-    padding:20px;}
+    padding:20px;
+&.p{padding:2px;}}
 .footer__logo{
         font-size:15px;}
 
@@ -12,15 +13,16 @@ footer{
     padding:0 10px 0 0;}
 
 .footer__list{
+    a{
     display:flex; 
     flex-direction:column;
     line-height:0%;
-    padding:0;
+    padding:0;}
     a:link {color:white;};
     a:hover{color:white;};
     a:active{color:white;};
     a:visited{color:white;};
         &-link{
         display:flex;
-        padding:0;}
+        line-height:110%;}
 }

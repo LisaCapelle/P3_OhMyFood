@@ -1,11 +1,10 @@
-//ALL
-#bloc-page{
+//ALL & HEADER
+.home-page{
     width:100%;
-    margin: auto;}
-
-//HEADER
-.return-icon{
-display:none;}
+    margin: auto;
+    .return-icon{
+        display:none;}
+    }
 
 // LOCATION
 .location{
@@ -15,29 +14,28 @@ display:none;}
     background-color: nth($background-colour,2);
     border-top:2px solid darken(nth($background-colour,2),10%);
     box-shadow: 1px 1px 3px 1px darken(nth($background-colour,2),10%) inset;
-        &__icon
-            {font-size:15px;
-            padding-right:30px;};
-        &__name{font-size:13px;}                
-    }
-
+    font-size: 15px;
+    padding: 10px;
+    .fa-solid {
+        padding-right:20px}
+    };
+    
 .call-to-action{
     background-color: nth($background-colour,1);
     display:flex; 
     flex-direction:column;
-    justify-content:center;
     align-items:center;
-    padding-bottom: 40px;};
-
-.call-to-action__p{
-        max-width:250px; 
+    padding: 30px;
+    > h2{
+        width:180px; 
+        margin:auto;
         text-align:center;}
-
-.btn-explore{
-    padding: 10px;
-    border-radius: 20px;
-    background: linear-gradient($colour-secondary, $colour-primary);
-    color:$colour-font-on-dark-bg;}
+    > p{
+        max-width:250px; 
+        text-align:center;
+        font-weight:normal;
+        padding:20px 0;}    
+    };
 
 #steps{
     display:flex;
@@ -45,7 +43,7 @@ display:none;}
     align-items:center;
     padding: 20px;}
 
-.list__steps    {
+.list__steps{
     display:flex;
     flex-direction:column;
     list-style:none;
@@ -53,27 +51,20 @@ display:none;}
     margin:0;}
 
 .icon{
-    &--screen, &--list, &--store {padding:20px;}
-    &--screen, &--list {color:lighten($colour-font-on-light-bg,40%)}
-}
-
-.btn{
-    width:250px;
-    display:flex;
-    align-items:center;
-    margin:0 0 20px 15px;
-    position:relative;
-    border-radius:20px;
-    background-color: nth($background-colour,1);
-    box-shadow: 2px 5px 5px darken(nth($background-colour,1),10%);}
+    padding:20px;
+    color:lighten($colour-font-on-light-bg,40%);
+    > .fa-solid{
+        padding-right:20px;}
+    }
 
 .number{border-radius:10px; 
         background:$colour-primary;
         font-size:10px;
         width:12px;
         position: absolute;
-        padding:3px 0 1px 4px;
+        padding:3px;
         left:-7px;
+        top:20px;
         color:$colour-font-on-dark-bg;
         // @include text-colour;
     }
@@ -106,10 +97,14 @@ display:none;}
     width:320px;
     display:flex;
     justify-content: space-between;
-    
     position:relative;
     border-radius:0  0 15px 15px;
-    background-color: #fff;    }
+    background-color: #fff;    
+    &.like{
+        &--regular{font-size:20px;position:absolute;}
+        &--solid{font-size:20px;position:absolute;}
+      }
+    }
 
 .restaurant__description{
     display:flex; 
@@ -118,10 +113,12 @@ justify-content:space-around;}
 
 .new{
     width:fit-content;
-    padding:7px;
+    padding:4px 7px;
     background-color: $colour-tertiary;
     color:darken($colour-tertiary,40%);
+    font-weight:bold;
+    font-size:12px;
     position:absolute;
-    top:20px;
-    right:20px;}
+    top:15px;
+    right:15px;}
 

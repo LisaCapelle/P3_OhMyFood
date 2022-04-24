@@ -9,7 +9,7 @@
 <script src="https://kit.fontawesome.com/f9f2966823.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div id="bloc-page">
+	<div class="home-page">
 <!-- LOADING SPINNER TO ADD -->
 <!-- <div class="loader">
 </div> -->
@@ -26,49 +26,48 @@
 <main>
 <!--LOCATION-->
 	<div class="location">
-		<div class="location__icon">
-			<i class="fa-solid fa-location-dot"></i>
-		</div>
-		<p class="location__name">Paris, Belleville</p>
+		<i class="fa-solid fa-location-dot"></i>
+		<span>Paris, Belleville</span>
 	</div>
+
 <!--CALL-TO-ACTION-->
 	<div class="call-to-action">
-		<p class="style-bold">Réservez le menu qui vous convient</p>
+		<h2>Réservez le menu qui vous convient</h2>
 		<p class="call-to-action__p">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-		<div class="btn-explore">Explorer nos restaurants</div>
+		<div class="btn-action">Explorer nos restaurants</div>
 	</div>
 
 <!--STEPS-->
 <section id="steps">
 <h2>Fonctionnement</h2>
 	<ul class="list__steps">
-		<a href="#">
-			<li class="btn">	
+		<li class="btn-step">
+			<a href="#">	
 				<div class="number">1</div>
-				<div class=icon--screen>
+				<div class="icon">
 					<i class="fa-solid fa-mobile-screen"></i>
+					<span>Choisissez un restaurant</span>
 				</div>
-				<p>Choisissez un restaurant</p>
-			</li>
-		</a>
-		<a href="#">
-			<li class="btn">
+			</a>
+		</li>
+		<li class="btn-step">
+			<a href="#">
 				<div class="number">2</div>
-				<div class="icon--list">
+				<div class="icon">
 					<i class="fa-solid fa-list"></i>
+					<span>Composez votre menu</span>
 				</div>
-				<p>Composez votre menu</p>
-			</li>
-		</a>
-		<a href="#">
-			<li class="btn">
+			</a>		
+		</li>
+		<li class="btn-step">
+			<a href="#">
 				<div class="number">3</div>
-				<div class="icon--store">
+				<div class="icon">
 				   <i class="fa-solid fa-store"></i>
+					<span>Dégustez au restaurant</span>
 				</div>
-				<p>Dégustez au restaurant</p>
-			</li>
-		</a>
+			</a>
+		</li>
 	</ul>
 </section>	
 
@@ -93,7 +92,7 @@
 							<i class="fa-regular fa-heart"></i>
 						</div>
 						<div class="like--solid">	
-							</i> <i class="fa-solid fa-heart"></i>
+							<i class="fa-solid fa-heart"></i>
 						</div>
 					</div>
 				</div>
@@ -117,7 +116,7 @@
 							<i class="fa-regular fa-heart"></i>
 						</div>
 						<div class="like--solid">	
-							</i> <i class="fa-solid fa-heart"></i>
+							<i class="fa-solid fa-heart"></i>
 						</div>
 					</div>
 				</div>
@@ -140,7 +139,7 @@
 							<i class="fa-regular fa-heart"></i>
 						</div>
 						<div class="like--solid">	
-							</i> <i class="fa-solid fa-heart"></i>
+							<i class="fa-solid fa-heart"></i>
 						</div>
 					</div>
 				</div>
@@ -163,7 +162,7 @@
 							<i class="fa-regular fa-heart"></i>
 						</div>
 						<div class="like--solid">	
-							</i> <i class="fa-solid fa-heart"></i>
+							<i class="fa-solid fa-heart"></i>
 						</div>
 					</div>
 				</div>
@@ -176,33 +175,28 @@
 <footer>
 	<div class="footer__logo">ohmyfood</div>
 	<ul class="footer__list">
-		<a href="#">
+		
 			<li class="footer__list-link">
-				<div class="footer__icon">
+					<div class="footer__icon">
 					<i class="fa-solid fa-utensils"></i>
 				</div>
 				<p>Proposer un restaurant</p>
 			</li>
-		</a>
-		<a href="#">
 			<li class="footer__list-link">
-				<div class="footer__icon">
+					<div class="footer__icon">
 					<i class="fa-solid fa-handshake-angle"></i>
 				</div>
 				<p>Devenir partenaire</p>
 			</li>
-		</a>
-		<a href="#">
+		
 			<li class="footer__list-link">
 				<p>Mentions légales</p>
 			</li>
-		</a>
-		<a href="mailto:contact@ohmyfood.fr">
 			<li class="footer__list-link">
-				<p>Contact</p>
+				
+				<p><a href="mailto:contact@ohmyfood.fr"></a>Contact</p>
 			</li>
-		</a>
-	</ul>
+		</ul>
 </footer>
 </div>
 </body>
