@@ -1,5 +1,10 @@
 
 // FUNCTIONS
 
+// @function lightness-shift ($background-colour:#fff) {
+//     @if(lightness($background-colour)<50%) {@return #fff;}
+//     @else{@return #000;}
+// }
 
-
+// $background-colour: #f6f6f6, #eaeaea, #f5edff, #353535, #535151;
+// $block:(h1:Shrikhand, logo:Shrikhand, h2:Roboto, name:Shrikhand,);

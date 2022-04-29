@@ -4,12 +4,13 @@ $colour-primary: #9356DC;
 $colour-secondary: #FF79DA;
 $colour-tertiary: #99E2D0;
 $colour-font-on-dark-bg:#fff;
-$colour-font-on-light-bg:black;
+$colour-font-on-light-bg:#000;
 
 // Lists 
 $background-colour: #f6f6f6, #eaeaea, #f5edff, #353535, #535151;
-$block:(h1:Shrikhand, logo:Shrikhand, h2:Roboto, name:Shrikhand,);
+
 
 // Maps
-$breakpoints:(mobile,599px);
+$block:(h1:Shrikhand, logo:Shrikhand, name:Shrikhand, h2:Roboto);
+$breakpoints:(tablet:600px, desktop:768px);
 

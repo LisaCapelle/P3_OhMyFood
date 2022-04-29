@@ -7,7 +7,9 @@
     color:$colour-font-on-dark-bg;
     box-shadow: 2px 2px 3px 1px darken(nth($background-colour,2),10%);}
 .btn-action:hover{
-    @include hover-bow-shadow;}
+    // @include hover-box-shadow;
+    box-shadow: 7px 7px 7px darken(nth($background-colour,2),30%);
+}
 .btn-step{
     width:280px;
     display:flex;
@@ -19,8 +21,11 @@
     box-shadow: 2px 5px 5px darken(nth($background-colour,1),10%);}
     
 .btn-step:hover{
-    @include hover-bow-shadow;
-    @include hover-background-color;}
+    // @include hover-box-shadow;
+    // @include hover-background-color;
+    box-shadow: 7px 7px 7px darken(nth($background-colour,1),30%);
+    background-color:lighten(nth($background-colour,1),20%);
+}
 
 .like{
     display:flex;
