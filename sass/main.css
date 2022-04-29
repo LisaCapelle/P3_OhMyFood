@@ -39,6 +39,7 @@ h2, h3, h4, p, ul, li, i, span {
   font-size: 17px;
   padding-left: 10px;
   margin: 0;
+  position: relative;
 }
 
 h4 {
@@ -47,7 +48,7 @@ h4 {
   line-height: 120%;
 }
 
-p {
+p, span {
   font-size: 13px;
   margin: 1px;
   line-height: 120%;
@@ -83,6 +84,7 @@ a:hover {
 }
 
 .btn-action {
+  text-align: center;
   padding: 10px;
   border-radius: 20px;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -173,6 +175,13 @@ footer.p {
 .footer__list-link {
   display: flex;
   line-height: 110%;
+}
+
+.footer__list-link span {
+  font-weight: 100;
+}
+.footer__list-link > p {
+  font-weight: 100;
 }
 
 .home-page {
@@ -319,29 +328,24 @@ footer.p {
   right: 15px;
 }
 
-.footer__list-link span {
-  font-weight: 100;
-}
-.footer__list-link > p {
-  font-weight: 100;
-}
-
 .menu-page {
   width: 100%;
   margin: auto;
 }
-.menu-page .return-icon {
+
+.return-icon {
   display: inline-block;
   position: absolute;
   left: 20px;
 }
-.menu-page .logo {
+
+.logo {
   position: relative;
   justify-content: flex-start;
 }
 
-aside {
-  z-index: 2;
+#presentation {
+  z-index: 1;
 }
 
 .main__image {
@@ -349,6 +353,16 @@ aside {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.title {
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  border-radius: 15px 15px 0 0;
+  justify-content: space-between;
+  position: relative;
+  top: -15px;
 }
 
 .dish-category > h3:before {
@@ -362,20 +376,13 @@ aside {
 }
 
 .dishes {
-  position: absolute;
-  z-index: 1;
-  bottom: 10px;
   background-color: #f6f6f6;
+  padding-bottom: 30px;
 }
-
-.title {
-  background-color: #f6f6f6;
-  display: flex;
-  align-items: center;
-  padding-top: 15px;
-  position: relative;
-  border-radius: 15px 15px 0 0;
-  justify-content: space-between;
+.dishes > .btn-action {
+  width: 120px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .name {
@@ -395,7 +402,7 @@ aside {
 .menus {
   list-style: none;
   margin: 0;
-  padding: 10px 0px;
+  padding: 10px 0;
   background-color: #f6f6f6;
 }
 
@@ -411,6 +418,10 @@ aside {
   justify-content: center;
   align-items: baseline;
   line-height: 10%;
+  padding: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dish-description {
@@ -419,6 +430,18 @@ aside {
   justify-content: space-between;
   background-color: white;
   border-radius: 20px;
-  margin: 20px;
+  margin: 0 10px 15px;
+}
+.dish-description > .dish-price {
   padding: 10px;
+}
+.dish-description > .dish-price > p {
+  font-weight: 700;
+}
+
+.dish-choose-icon {
+  padding: 20px 18px;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  color: white;
 }/*# sourceMappingURL=main.css.map */

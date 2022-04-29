@@ -26,3 +26,7 @@ footer{
         display:flex;
         line-height:110%;}
 }
+.footer__list-link {
+    span{font-weight:100;}
+    > p{font-weight:100;}
+}
