@@ -4,10 +4,12 @@
     @media screen and (max-width:map-get($breakpoints, mobile)) {@content;}
 }
 
-@mixin text-colour ($colour) {
-    @if (lightness($colour)<25%){$colour:$colour-font-on-light-bg;}
-    @else {color:colour-font-on-light-bg;}
-}
+// @mixin text-colour ($colour) {
+//     @if (lightness($colour)<25%){$colour:$colour-font-on-light-bg;}
+//     @else {color:colour-font-on-light-bg;}
+// }
+@mixin hover-box-shadow ($color:nth($background-colour,2), $size: 7px 7px 7px 1px) {
+    box-shadow:$size darken($color:30%);}
 
-
-
+@mixin hover-background-color ($color:nth($background-colour,1)) {
+        background-color: lighten($color:20%);}

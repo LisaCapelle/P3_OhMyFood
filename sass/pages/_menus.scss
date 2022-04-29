@@ -58,8 +58,9 @@
         position:absolute;}
 }
 .menus{
+    max-width:330px;
     list-style:none;
-    margin:0;
+    margin:auto;
     padding: 10px 0;
     background-color:nth($background-colour,1);
 }
