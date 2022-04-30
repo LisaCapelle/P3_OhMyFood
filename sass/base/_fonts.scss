@@ -9,7 +9,9 @@ h2, h3, h4, p, ul, li, i, span {font-family:'Roboto', sans-serif;}
         font-size: 18px;
         align-self:baseline;
         padding-left:20px;
-        @include tablet {align-self:unset;}}
+        @include tablet {align-self:unset;};
+        @include desktop {font-size:22px;}
+        }
     h3{
         font-size: 15px;
         font-weight:600;
@@ -29,22 +31,23 @@ h2, h3, h4, p, ul, li, i, span {font-family:'Roboto', sans-serif;}
     h2{
         font-size: 25px;
         align-self:baseline;
-        padding-left:20px;};
+        padding-left:20px;
+        @include tablet {font-size:30px;}};
     h3{
         font-size: 17px;
         padding-left:10px;
         margin:0;
-        position:relative;};
-        }
+        position:relative;}
     h4{
         font-size: 15px;
         margin:1px;
         line-height:120%}
-
     p, span {
         font-size:13px;
         margin:1px;
-    line-height:120%;}
+    line-height:120%;
+    // @include tablet{margin-bottom:0;line-height:100%;}
+}}
 
 .style-bold{
     align-self:center;
@@ -70,8 +73,7 @@ a:hover {
     text-decoration:none;
     color: $colour-font-on-light-bg;
 }
-    // @include text-colour (color:#fff);
-    
+  
 
     // .typography{
 //     @if ($block==h1 or logo) {font-family: 'Shrikhand', cursive;}

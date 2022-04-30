@@ -8,6 +8,7 @@
     box-shadow: 2px 2px 3px 1px darken(nth($background-colour,2),10%);}
 .btn-action:hover{
     // @include hover-box-shadow;
+    cursor: pointer;
     box-shadow: 7px 7px 7px darken(nth($background-colour,2),30%);
 }
 .btn-step{

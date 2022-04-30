@@ -5,15 +5,17 @@ footer{
     background-color: nth($background-colour,4);
     color:$colour-font-on-dark-bg;
     padding:20px;
-&.p{padding:2px;}}
+&.p{
+    padding:2px;}}
 .footer__logo{
-        font-size:15px;}
+        font-size:15px;
+        @include tablet{text-align:center;}}
 
 .footer__icon{
     padding:0 10px 0 0;}
 
 .footer__list{
-@include tablet{display:flex;flex-direction:row; justify-content:stretch;}
+@include tablet{display:flex;flex-direction:row; justify-content:center;}
 }
 .footer__list{
     a{
@@ -30,6 +32,9 @@ footer{
         line-height:110%;}
 }
 .footer__list-link {
+    align-items:center;
     span{font-weight:100;}
-    > p{font-weight:100;}
+    > p{font-weight:100;
+        @include tablet{padding-left:10px;}
+    }
 }

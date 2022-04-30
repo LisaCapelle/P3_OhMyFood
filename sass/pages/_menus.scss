@@ -1,7 +1,7 @@
 //ALL
 .menu-page{
     width:100%;
-    max-width:1440px;
+    max-width:1019px;
     margin: auto;}
 
     .return-icon{
@@ -28,6 +28,7 @@
     justify-content:space-between;
     position:relative;
     top:-15px;
+    @include tablet{justify-content:center;}
 }
 //DISHES
 .dish-category{
@@ -39,6 +40,9 @@
     width: 40px;
     content: '';
     border-top: 3px solid $colour-tertiary;}
+}
+.wrap{
+    @include tablet{display:flex; flex-wrap:wrap;};
 }
 .dishes {
     background-color:nth($background-colour,1);
@@ -52,6 +56,7 @@
     font-size:25px;
 }
 .like{
+    @include tablet{padding-left:30px;};
     cursor: pointer;
     &--regular{
         position:absolute;}
@@ -64,10 +69,13 @@
     margin:auto;
     padding: 10px 0;
     background-color:nth($background-colour,1);
+    @include tablet{margin-top:0};
 }
 .dish-category{
     background-color:nth($background-colour,1);
     margin:0;
+    padding-bottom:20px;
+    @include tablet{display:flex; justify-content:center;};
 }
 .dish-name{
 display:flex;
@@ -89,10 +97,9 @@ text-overflow:ellipsis;}
     border-radius:20px;
     margin:0 10px 15px;
     > .dish-price{
-                padding:10px;
-                > p{
-                    font-weight:700;
-                }
+        padding:10px;
+    > p{
+        font-weight:700;}
    }
 }
 .dish-choose-icon{
@@ -100,4 +107,6 @@ text-overflow:ellipsis;}
     background-color:$colour-tertiary;
     border-radius:0 20px 20px 0;
     color:white;
-}
+    display:none;
+    &:hover{display:inline-block;}
+    }
