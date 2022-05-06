@@ -6,7 +6,8 @@ h2, h3, h4, p, ul, li, i, span {font-family:'Roboto', sans-serif;}
 
 .home-page{
     h2{
-        font-size: 18px;
+        font-size: 20px;
+        font-weight:700;
         align-self:baseline;
         padding-left:20px;
         @include tablet {align-self:unset;};
@@ -29,23 +30,22 @@ h2, h3, h4, p, ul, li, i, span {font-family:'Roboto', sans-serif;}
 
 .menu-page{
     h2{
-        font-size: 25px;
+        font-size: 30px;
         align-self:baseline;
         padding-left:20px;
         @include tablet {font-size:30px;}};
     h3{
         font-size: 17px;
+        font-weight:400;
         padding-left:10px;
         margin:0;
         position:relative;}
     h4{
-        font-size: 15px;
-        margin:1px;
-        line-height:120%}
+        font-size: 16px;
+        margin:0;}
     p, span {
         font-size:13px;
-        margin:1px;
-    line-height:120%;
+        
     // @include tablet{margin-bottom:0;line-height:100%;}
 }}
 
@@ -70,6 +70,7 @@ a:visited {
     color: $colour-font-on-light-bg;
 }
 a:hover {
+    cursor:pointer;
     text-decoration:none;
     color: $colour-font-on-light-bg;
 }

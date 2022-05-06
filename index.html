@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>OHMYFOOD - HOME</title>
+<title>OHMYFOOD - ACCUEIL</title>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="sass/main.css" />
@@ -9,10 +9,16 @@
 <script src="https://kit.fontawesome.com/f9f2966823.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="home-page">
-<!-- LOADING SPINNER TO ADD -->
-<!-- <div class="loader">
-</div> -->
+	<div class="home-page">	
+
+<!--LOADING SPINNER-->		
+<div class="loading-spinner">
+<div id="img1" class="img"></div>
+<div id="img2" class="img"></div>
+<div id="img3" class="img"></div>
+<div id="img4" class="img"></div>
+<div id="img5" class="img"></div>
+</div>
 
 <!--HEADER-->
 <header>
@@ -42,30 +48,24 @@
 <h2>Fonctionnement</h2>
 	<ul class="list__steps">
 		<li class="btn-step">
-			<a href="#">	
-				<div class="number">1</div>
-				<div class="icon">
-					<i class="fa-solid fa-mobile-screen"></i>
-					<span>Choisissez un restaurant</span>
-				</div>
+			<div class="number">1</div>
+			<a href="#">		
+				<i class="icon fa-solid fa-mobile-screen"></i>
+				<span>Choisissez un restaurant</span>
 			</a>
 		</li>
 		<li class="btn-step">
-			<a href="#">
-				<div class="number">2</div>
-				<div class="icon">
-					<i class="fa-solid fa-list"></i>
-					<span>Composez votre menu</span>
-				</div>
+			<div class="number">2</div>
+			<a href="#">	
+				<i class="icon fa-solid fa-list"></i>
+				<span>Composez votre menu</span>
 			</a>		
 		</li>
 		<li class="btn-step">
+			<div class="number">3</div>
 			<a href="#">
-				<div class="number">3</div>
-				<div class="icon">
-				   <i class="fa-solid fa-store"></i>
-					<span>Dégustez au restaurant</span>
-				</div>
+				<i class="icon fa-solid fa-store"></i>
+				<span>Dégustez au restaurant</span>
 			</a>
 		</li>
 	</ul>
@@ -86,7 +86,7 @@
 				<div class="card__description">
 					<div class="restaurant_description">
 						<h3>La palette du goût</h3>
-						<h4>Menilmontant</h4>
+						<h4>Ménilmontant</h4>
 					</div>
 					<div class="like">
 						<div class="like--regular">
@@ -174,26 +174,23 @@
 </main>
 
 <!--FOOTER-->
-<footer>
-	<div class="footer__logo">ohmyfood</div>
+	<footer>
+		<div class="footer__logo">ohmyfood
+		</div>
 		<ul class="footer__list">
 			<li class="footer__list-link">
-				<div class="footer__icon">
-					<i class="fa-solid fa-utensils"></i>
-					<span>Proposer un restaurant</span>
-				</div>
+				<i class="fa-solid fa-utensils"></i>
+				<span>Proposer un restaurant</span>
 			</li>
 			<li class="footer__list-link">
-				<div class="footer__icon">
-					<i class="fa-solid fa-handshake-angle"></i>
-					<span>Devenir partenaire</span>
-				</div>
+				<i class="fa-solid fa-handshake-angle"></i>
+				<span>Devenir partenaire</span>
 			</li>
 			<li class="footer__list-link">
 				<span>Mentions légales</span>
 			</li>
 			<li class="footer__list-link">
-				<p><a href="mailto:contact@ohmyfood.fr"></a>Contact</p>
+				<span><a href="mailto:contact@ohmyfood.fr">Contact</a></span>
 			</li>
 		</ul>
 	</footer>

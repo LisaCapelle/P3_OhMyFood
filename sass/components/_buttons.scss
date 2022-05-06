@@ -12,10 +12,12 @@
     box-shadow: 7px 7px 7px darken(nth($background-colour,2),30%);
 }
 .btn-step{
-    width:280px;
+    margin:auto;
+    // width:300px;
     display:flex;
     text-align: center;
-    margin-bottom:15px;
+    margin-bottom:17px;
+    padding:5px 70px 5px 30px;
     position:relative;
     border-radius:20px;
     background-color: nth($background-colour,1);
@@ -24,9 +26,12 @@
 .btn-step:hover{
     // @include hover-box-shadow;
     // @include hover-background-color;
+    cursor: pointer;
     box-shadow: 7px 7px 7px darken(nth($background-colour,1),30%);
-    background-color:lighten(nth($background-colour,1),20%);
-}
+    background-color:lighten($colour-primary,36%);}
+.btn-step:hover{
+    color:$colour-secondary;}
+
 
 .like{
     display:flex;
