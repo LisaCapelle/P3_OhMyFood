@@ -253,7 +253,7 @@ footer {
           animation: up 1s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  transition: 2s;
+  transition: 1.6s;
   border-bottom: none;
   border-right: none;
   -webkit-animation-timing-function: linear;
@@ -324,14 +324,20 @@ footer {
 }
 
 .loading-spinner {
-  -webkit-animation: hide 1s ease-in-out 2s;
-          animation: hide 1s ease-in-out 2s;
+  -webkit-animation: hide 1s ease-out;
+          animation: hide 1s ease-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
 @-webkit-keyframes hide {
-  to {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
     visibility: hidden;
     width: 0;
     height: 0;
@@ -339,7 +345,13 @@ footer {
 }
 
 @keyframes hide {
-  to {
+  0% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
     visibility: hidden;
     width: 0;
     height: 0;
@@ -349,6 +361,9 @@ footer {
   0% {
     opacity: 0;
   }
+  90% {
+    opacity: 0.1;
+  }
   100% {
     opacity: 1;
   }
@@ -356,6 +371,9 @@ footer {
 @keyframes hidetemporarily {
   0% {
     opacity: 0;
+  }
+  90% {
+    opacity: 0.1;
   }
   100% {
     opacity: 1;
@@ -365,8 +383,8 @@ footer {
   width: 100%;
   max-width: 1019px;
   margin: auto;
-  -webkit-animation: hidetemporarily 3s ease-in backwards;
-          animation: hidetemporarily 3s ease-in backwards;
+  -webkit-animation: hidetemporarily 4.3s -1s ease-out backwards;
+          animation: hidetemporarily 4.3s -1s ease-out backwards;
 }
 .home-page .return-icon {
   display: none;
@@ -707,14 +725,12 @@ footer {
 
 .dish-description {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
+  height: 60px;
+  width: 350px;
   background-color: white;
   border-radius: 20px;
   margin: 0 10px 15px;
-}
-.dish-description > .dish-price {
-  padding-right: 20px;
 }
 .dish-description > .dish-price > p {
   font-weight: 700;
@@ -722,20 +738,11 @@ footer {
 
 .dish-description:hover {
   cursor: pointer;
-  margin-right: 0;
 }
 .dish-description:hover > .dish-choose-icon {
-  width: 30px;
+  width: 40px;
   border-radius: 0 20px 20px 0;
   transition: width 1s;
-}
-.dish-description:hover > .dish-choose-icon > .rotate {
-  -webkit-animation: roll-in linear forwards;
-          animation: roll-in linear forwards;
-  -webkit-animation-duration: 0.3s;
-          animation-duration: 0.3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
 }
 .dish-description:hover > .dish-name h4, .dish-description:hover p {
   max-width: 190px;
@@ -748,57 +755,46 @@ footer {
   padding-right: 5px;
 }
 
+.rot {
+  -webkit-animation: roll-in linear forwards;
+          animation: roll-in linear forwards;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
 @-webkit-keyframes roll-in {
   0% {
-    right: -15px;
-    opacity: 0;
     transform: rotate(0deg);
     border-radius: 50px;
     object-fit: contain;
   }
   25% {
-    right: -7px;
-    opacity: 0.5;
     transform: rotate(90deg);
-    border-radius: 50px;
-    object-fit: contain;
   }
   75% {
-    right: -3px;
     transform: rotate(180deg);
-    object-fit: contain;
   }
   100% {
-    right: 0px;
     transform: rotate(360deg);
   }
 }
 
 @keyframes roll-in {
   0% {
-    right: -15px;
-    opacity: 0;
     transform: rotate(0deg);
     border-radius: 50px;
     -o-object-fit: contain;
        object-fit: contain;
   }
   25% {
-    right: -7px;
-    opacity: 0.5;
     transform: rotate(90deg);
-    border-radius: 50px;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
   75% {
-    right: -3px;
     transform: rotate(180deg);
-    -o-object-fit: contain;
-       object-fit: contain;
   }
   100% {
-    right: 0px;
     transform: rotate(360deg);
   }
 }
@@ -818,9 +814,8 @@ footer {
 
 .dish-choose-icon {
   width: 0px;
-  height: 30px;
+  height: 60px;
   background-color: #99E2D0;
   color: white;
-  position: relative;
   overflow: hidden;
 }/*# sourceMappingURL=main.css.map */

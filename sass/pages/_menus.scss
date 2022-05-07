@@ -3,16 +3,18 @@
     width:100%;
     max-width:1019px;
     margin: auto;
-    background-color:nth($background-colour,1)}
-
+    background-color:nth($background-colour,1)
+}
 // HEADER
 .return-icon{
     display:inline-block; 
     position:absolute; 
-    left:20px;}
-.logo{position:relative; 
-    justify-content: flex-start;}
-
+    left:20px;
+}
+.logo{
+    position:relative; 
+    justify-content: flex-start;
+}
 //PRESENTATION
 #presentation{
     z-index:1;
@@ -21,7 +23,7 @@
     width:100%;
     height:200px;
     object-fit: cover; 
-   }
+}
 .title{
     background-color:nth($background-colour,1);
     display:flex; 
@@ -30,7 +32,9 @@
     justify-content:space-between;
     position:relative;
     top:-15px;
-    @include tablet{justify-content:center;}
+    @include tablet{
+        justify-content:center;
+    }
 }
 // DISHES
 .dish-category{
@@ -41,19 +45,21 @@
     height: 0;
     width: 40px;
     content: '';
-    border-top: 3px solid $colour-tertiary;}
+    border-top: 3px solid $colour-tertiary;
+    }
 }
 .wrap{
-    @include tablet{display:flex; flex-wrap:wrap;}
+    @include tablet{display:flex; flex-wrap:wrap;
+    }
 }
-.menus:nth-child(1) {
+.menus:nth-child(1){
     position:relative;
     animation-name:appear;
     animation-duration:3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-.menus:nth-child(2) {
+.menus:nth-child(2){
     position:relative;
     animation-name:appear;
     animation-duration:2.5s;
@@ -62,7 +68,7 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-.menus:nth-child(3) {
+.menus:nth-child(3){
     position:relative;
     animation-name:appear;
     animation-duration:2s;
@@ -71,7 +77,7 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-@keyframes appear {
+@keyframes appear{
     0%{
         top:70px;
         opacity: 0;
@@ -81,24 +87,29 @@
         opacity: 1;
     }
 }
-.dishes {
+.dishes{
     background-color:nth($background-colour,1);
     padding-bottom:50px;
     >.btn-action{
         width:120px;
         margin-right:auto;
-        margin-left:auto;}
+        margin-left:auto;
+    }
 }
 .name{
     font-size:25px;
 }
 .like{
-    @include tablet{padding-left:30px;};
     cursor: pointer;
+    @include tablet{
+        padding-left:30px;
+    };
     &--regular{
-        position:absolute;}
+        position:absolute;
+    }
     &--solid{
-        position:absolute;}
+        position:absolute;
+    }
 }
 .menus{
     max-width:400px;
@@ -106,42 +117,40 @@
     margin:auto;
     padding: 20px 0;
     background-color:nth($background-colour,1);
-    @include tablet{margin-top:0};
+    @include tablet{
+        margin-top:0
+    };
 }
 .dish-category{
     background-color:nth($background-colour,1);
     margin:0;
     padding:0 0 20px 5px;
-    @include tablet{display:flex; justify-content:center;};
+    @include tablet{
+        display:flex; justify-content:center;
+    };
 }
 .dish-description{
     display:flex;
-    align-items:flex-end;
+    // align-items:flex-end;
     justify-content:space-between;
+    height:60px;
+    width:350px;
     background-color: white;
     border-radius:20px;
     margin:0 10px 15px;
     > .dish-price{
-        padding-right:20px;
+        // padding-right:20px;
     > p{
         font-weight:700;}
    }
 }
 .dish-description:hover{
     cursor:pointer;
-    margin-right:0;
     > .dish-choose-icon{
         // display:inline-block;
-        width:30px;
-        // position:relative;
+        width:40px;
         border-radius:0 20px 20px 0;
-        // padding:20px 18px;
         transition: width 1s;
-        > .rotate{
-            animation: roll-in linear forwards;
-        animation-duration:0.3s;
-        animation-iteration-count:1;
-        }
     }
     > .dish-name h4, p {
         max-width:190px;
@@ -154,33 +163,29 @@
         padding-right:5px;
     }
 }
-// .fa-circle-check {
-   // animation: roll-in linear forwards;
-    // animation-duration:0.3s;
-    // animation-iteration-count:1;
-// }
+.rot{
+    animation: roll-in linear forwards;
+    animation-duration:0.5s;
+    animation-iteration-count:1;
+}
+
 @keyframes roll-in{
     0%{
-        right:-15px;
-        opacity:0;
+        // right:-7px;
         transform:rotate(0deg);
         border-radius:50px;
         object-fit:contain;
     }
     25%{
-        right:-7px;
-        opacity:0.5;
+        // right:-5px;
         transform:rotate(90deg);
-        border-radius:50px;
-        object-fit:contain;
     }
     75%{
-        right:-3px;
+        // right:-2px;
         transform:rotate(180deg);
-        object-fit:contain;
     }
     100%{
-        right:0px;
+        // right:0px;
         transform:rotate(360deg);
     }
 }
@@ -194,12 +199,14 @@
 }
 .dish-choose-icon{
     width:0px;
-    height:30px;
+    height:60px;
     // padding:20px 18px;
     background-color:$colour-tertiary;
     color:white;
-    position:relative;
+    // margin:auto;
+    // text-align:center;
+    // vertical-align:center;
+    // position:relative;
     // display:none;
-  
     overflow:hidden;
 }

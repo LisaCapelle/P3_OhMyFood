@@ -8,7 +8,7 @@
     border: 3px solid $colour-primary;
     animation: up 1s;
     animation-iteration-count: infinite;
-    transition:2s;
+    transition:1.6s;
     border-bottom:none;
     border-right:none;
     animation-timing-function:linear;
@@ -51,18 +51,27 @@
     animation-delay:.8s;
 }  
 .loading-spinner{
-    animation:hide 1s ease-in-out 2s;
+    animation:hide 1s ease-out;
     animation-fill-mode: forwards;
 }
 @keyframes hide{
-        to{
-            visibility:hidden;
+    0%{
+        opacity:1;
+    }
+    70%{
+        opacity:0.8;
+    }    
+    100%{
+        visibility:hidden;
         width:0;
         height:0;}
 }
 @keyframes hidetemporarily{
     0%{
         opacity:0;
+    }
+    90%{
+        opacity:0.1;
     }
     100%{
         opacity:1;
@@ -74,7 +83,7 @@
     width:100%;
     max-width:1019px;
     margin: auto;
-    animation:hidetemporarily 3s ease-in backwards;
+    animation:hidetemporarily 4.3s -1s ease-out backwards;
     .return-icon{
         display:none;
     }
