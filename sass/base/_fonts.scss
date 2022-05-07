@@ -1,9 +1,37 @@
+// ALL
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
 h1, .logo, .footer__logo, .name {font-family:'Shrikhand', cursive;}
 h2, h3, h4, p, ul, li, i, span {font-family:'Roboto', sans-serif;}
 
+.style-bold {
+    align-self:center;
+    font-size:18px;
+    max-width:170px;
+    text-align:center;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+a:link {
+    text-decoration:none;
+    color: ($colour-font-on-light-bg);
+}
+a:active {
+    text-decoration:none;
+    color: $colour-font-on-light-bg;
+}
+a:visited {
+    text-decoration:none;
+    color: $colour-font-on-light-bg;
+}
+a:hover {
+    cursor:pointer;
+    text-decoration:none;
+    color: $colour-font-on-light-bg;
+}
+
+// HOME-PAGE
 .home-page{
     h2{
         font-size: 20px;
@@ -28,55 +56,28 @@ h2, h3, h4, p, ul, li, i, span {font-family:'Roboto', sans-serif;}
         font-weight:700;
         }}
 
+// MENU PAGES
 .menu-page{
     h2{
         font-size: 30px;
         align-self:baseline;
         padding-left:20px;
-        @include tablet {font-size:30px;}};
+        @include tablet {
+            font-size:30px;
+        }
+    }
     h3{
         font-size: 17px;
         font-weight:400;
         padding-left:10px;
         margin:0;
-        position:relative;}
+        position:relative;
+    }
     h4{
         font-size: 16px;
-        margin:0;}
+        margin:0;
+    }
     p, span {
         font-size:13px;
-        
-    // @include tablet{margin-bottom:0;line-height:100%;}
-}}
-
-.style-bold{
-    align-self:center;
-    font-size:18px;
-    max-width:170px;
-    text-align:center;
-    margin-bottom:0;
-    padding-bottom:0;}
-
-a:link {
-    text-decoration:none;
-    color: ($colour-font-on-light-bg);
+    }
 }
-a:active {
-    text-decoration:none;
-    color: $colour-font-on-light-bg;
-}
-a:visited {
-    text-decoration:none;
-    color: $colour-font-on-light-bg;
-}
-a:hover {
-    cursor:pointer;
-    text-decoration:none;
-    color: $colour-font-on-light-bg;
-}
-  
-
-    // .typography{
-//     @if ($block==h1 or logo) {font-family: 'Shrikhand', cursive;}
-//     @else {font-family:'Roboto', sans-serif;font-weight: normal;}
-//     }

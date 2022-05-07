@@ -1,16 +1,17 @@
-//ALL
+// ALL 
 .menu-page{
     width:100%;
     max-width:1019px;
     margin: auto;
     background-color:nth($background-colour,1)}
 
-    .return-icon{
-        display:inline-block; 
-        position:absolute; 
-        left:20px;}
-    .logo{position:relative; 
-        justify-content: flex-start;}
+// HEADER
+.return-icon{
+    display:inline-block; 
+    position:absolute; 
+    left:20px;}
+.logo{position:relative; 
+    justify-content: flex-start;}
 
 //PRESENTATION
 #presentation{
@@ -31,7 +32,7 @@
     top:-15px;
     @include tablet{justify-content:center;}
 }
-//DISHES
+// DISHES
 .dish-category{
     > h3:before{
     position: absolute;
@@ -70,21 +71,16 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
 @keyframes appear {
     0%{
         top:70px;
         opacity: 0;
-        // transform: scale(.1);
     }
     100%{
         top:0;
         opacity: 1;
-        // transform: scale(1);
     }
 }
-
-      
 .dishes {
     background-color:nth($background-colour,1);
     padding-bottom:50px;
@@ -112,7 +108,6 @@
     background-color:nth($background-colour,1);
     @include tablet{margin-top:0};
 }
-
 .dish-category{
     background-color:nth($background-colour,1);
     margin:0;
@@ -133,11 +128,61 @@
    }
 }
 .dish-description:hover{
-    > .dish-choose-icon{display:inline-block;}
-    > h4, p {max-width:180px;
+    cursor:pointer;
+    margin-right:0;
+    > .dish-choose-icon{
+        // display:inline-block;
+        width:30px;
+        // position:relative;
+        border-radius:0 20px 20px 0;
+        // padding:20px 18px;
+        transition: width 1s;
+        > .rotate{
+            animation: roll-in linear forwards;
+        animation-duration:0.3s;
+        animation-iteration-count:1;
+        }
+    }
+    > .dish-name h4, p {
+        max-width:190px;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow:ellipsis;}
+        text-overflow:ellipsis;
+        padding-right:0;
+    }
+    > .dish-price {
+        padding-right:5px;
+    }
+}
+// .fa-circle-check {
+   // animation: roll-in linear forwards;
+    // animation-duration:0.3s;
+    // animation-iteration-count:1;
+// }
+@keyframes roll-in{
+    0%{
+        right:-15px;
+        opacity:0;
+        transform:rotate(0deg);
+        border-radius:50px;
+        object-fit:contain;
+    }
+    25%{
+        right:-7px;
+        opacity:0.5;
+        transform:rotate(90deg);
+        border-radius:50px;
+        object-fit:contain;
+    }
+    75%{
+        right:-3px;
+        transform:rotate(180deg);
+        object-fit:contain;
+    }
+    100%{
+        right:0px;
+        transform:rotate(360deg);
+    }
 }
 .dish-name{
     display:flex;
@@ -147,11 +192,14 @@
     >h4 {padding:10px 0 0 10px;}
     > p {padding:2px 0 10px 10px; margin:0;}
 }
-
 .dish-choose-icon{
-    padding:20px 18px;
+    width:0px;
+    height:30px;
+    // padding:20px 18px;
     background-color:$colour-tertiary;
-    border-radius:0 20px 20px 0;
     color:white;
-    display:none}
-.dish-choose-icon:hover{        display:inline-block;}
+    position:relative;
+    // display:none;
+  
+    overflow:hidden;
+}

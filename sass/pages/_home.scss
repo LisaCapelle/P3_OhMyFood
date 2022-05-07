@@ -1,5 +1,4 @@
 //SPINNER
-
 .img{
     width:200px;
     height:200px;
@@ -18,77 +17,84 @@
     left:50%;
     top:10%;
 }
-   
 @keyframes up{
     from{transform:rotate(0deg);}
     50%{transform:rotate(180deg);}
     100%{transform:rotate(360deg);}
-    }
-    #img2{
+}
+#img2{
     width:190px;
     height:190px;
     left:50.35%;
     top:10.7%;
-        animation-delay:.2s;
-    }
-    #img3{
+    animation-delay:.2s;
+}
+#img3{
     width:180px;
     height:180px;
     left:50.70%;
     top:11.4%;
     animation-delay:.4s;
-    }
-    #img4{
+}
+#img4{
     width:170px;
     height:170px;
     left:51.05%;
     top:12.1%;
     animation-delay:.6s;
-    }
-    #img5{
+}
+#img5{
     width:160px;
     height:160px;
     left:51.40%;
     top:12.8%;
     animation-delay:.8s;
-    }
-    
+}  
 .loading-spinner{
-    animation:hide 0s ease-in 2s;
-    animation-fill-mode: forwards;}
-
+    animation:hide 1s ease-in-out 2s;
+    animation-fill-mode: forwards;
+}
 @keyframes hide{
-        to{visibility:hidden;
+        to{
+            visibility:hidden;
         width:0;
         height:0;}
+}
+@keyframes hidetemporarily{
+    0%{
+        opacity:0;
     }
-
+    100%{
+        opacity:1;
+    }
+}
 
 //ALL & HEADER
 .home-page{
     width:100%;
     max-width:1019px;
     margin: auto;
+    animation:hidetemporarily 3s ease-in backwards;
     .return-icon{
-        display:none;}
+        display:none;
     }
-
+}
 // LOCATION
 .location{
     display:flex;
     align-items:center;
     justify-content:center;
-    background-color: nth($background-colour,2);
+    background-color:nth($background-colour,2);
     border-top:2px solid darken(nth($background-colour,2),10%);
     box-shadow: 1px 1px 3px 1px darken(nth($background-colour,2),10%) inset;
     font-size: 15px;
     padding: 10px;
     .fa-solid {
-        padding-right:20px}
-    };
-    
+        padding-right:20px;
+    }
+}    
 .call-to-action{
-    background-color: nth($background-colour,1);
+    background-color:nth($background-colour,1);
     display:flex; 
     flex-direction:column;
     align-items:center;
@@ -97,80 +103,89 @@
         max-width:200px; 
         margin:auto;
         text-align:center;
-        @include tablet{width:unset;}}
+        @include tablet{
+            width:unset;
+        }
+    }
     > p{
         max-width:270px; 
         text-align:center;
         font-size:15px;
         font-weight:normal;
         padding:0 0 20px;
-        @include tablet{max-width:unset;}}    
-    };
-
+        @include tablet{max-width:unset;
+        }
+    }    
+}
+// STEPS
 #steps{
     display:flex;
     flex-direction:column;
     align-items:center;
-    padding: 20px 0;}
-
+    padding: 20px 0;
+}
 .list__steps{
     display:flex;
     flex-direction:column;
     list-style:none;
     padding:0;
-    margin:0;}
-
+    margin:0;
+}
 .icon{
     padding:20px;
     color:lighten($colour-font-on-light-bg,40%);
     > .fa-solid{
         padding-right:20px;
-        &:hover{color:$colour-primary;}
+        &:hover{
+            color:$colour-primary;
+        }
     }
-    }
-
-.number{border-radius:10px; 
-        background:$colour-primary;
-        font-size:10px;
-        width:12px;
-        position: absolute;
-        padding:3px;
-        left:-7px;
-        top:24px;
-        color:$colour-font-on-dark-bg;
-        // @include text-colour;
-    }
-
+}
+.number{
+    border-radius:10px; 
+    background:$colour-primary;
+    font-size:10px;
+    width:12px;
+    position: absolute;
+    padding:3px;
+    left:-7px;
+    top:24px;
+    color:$colour-font-on-dark-bg;
+}
+// RESTAURANTS
 #restaurants__cards{
     display:flex;
     flex-direction:column;
     align-items:center;
     padding:20px 0;
-    background-color:nth($background-colour,1);}
-
+    background-color:nth($background-colour,1);
+}
 .card-list{
     @include tablet{
         display:flex;
         flex-wrap:wrap;
-    justify-content:space-around;}
+        justify-content:space-around;
+    }
 }
 .restaurant__card{
     display:flex;
     flex-direction:column;
     margin-bottom:15px;
-    @include desktop{margin:20px;}}
-
+    @include desktop{margin:20px;
+    }
+}
 .card__img{
     display:flex;
     flex-direction:column;
     justify-content:space-evenly;
-    position:relative;}
-
-.image{width:310px;
+    position:relative;
+}
+.image{
+    width:310px;
     height:170px;
     object-fit:cover;
-    border-radius:15px 15px 0 0;}
-
+    border-radius:15px 15px 0 0;
+}
 .card__description{
     width:310px;
     display:flex;
@@ -180,17 +195,21 @@
     padding: 7px 0;
     background-color: #fff;
     box-shadow: 2px 5px 5px darken(nth($background-colour,1),10%);    
-    &.like{
-        &--regular{font-size:20px;position:absolute;}
-        &--solid{font-size:20px;position:absolute;}
-      }
-    }
-
+    // &.like{
+    //     &--regular{
+    //         font-size:20px;
+    //         position:absolute;
+    //     }
+    //     &--solid{
+    //         font-size:20px;
+    //         position:absolute;}
+    // }
+}
 .restaurant__description{
     display:flex; 
     flex-direction:column;
-justify-content:space-around;}
-
+    justify-content:space-around;
+}
 .new{
     width:fit-content;
     padding:4px 7px;
@@ -200,6 +219,5 @@ justify-content:space-around;}
     font-size:12px;
     position:absolute;
     top:15px;
-    right:15px;}
-
-  
+    right:15px;
+}  

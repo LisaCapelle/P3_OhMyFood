@@ -1,4 +1,10 @@
 // BUTTONS 
+
+// HEADER RETURN ICON BUTTON
+.return-icon{
+    color:lighten($colour-font-on-light-bg,20%);
+}
+// BUTTON-ACTION ON ALL PAGES 
 .btn-action{
     text-align:center;
     padding: 10px;
@@ -7,13 +13,12 @@
     color:$colour-font-on-dark-bg;
     box-shadow: 2px 2px 3px 1px darken(nth($background-colour,2),10%);}
 .btn-action:hover{
-    // @include hover-box-shadow;
     cursor: pointer;
     box-shadow: 7px 7px 7px darken(nth($background-colour,2),30%);
 }
+// BUTTON-STEP ON HOMEPAGE 
 .btn-step{
     margin:auto;
-    // width:300px;
     display:flex;
     text-align: center;
     margin-bottom:17px;
@@ -24,23 +29,40 @@
     box-shadow: 2px 5px 5px darken(nth($background-colour,1),10%);}
     
 .btn-step:hover{
-    // @include hover-box-shadow;
-    // @include hover-background-color;
     cursor: pointer;
     box-shadow: 7px 7px 7px darken(nth($background-colour,1),30%);
     background-color:lighten($colour-primary,36%);}
 .btn-step:hover{
     color:$colour-secondary;}
 
-
+// BUTTONS LIKE ON ALL PAGES 
 .like{
     display:flex;
     align-items:center;
     justify-content:center;
     padding-right:30px;
     cursor: pointer;
-    &--regular{font-size:20px;position:absolute;}
-    &--solid{font-size:20px;position:absolute; color:$colour-primary;}}
-
-.return-icon{
-    color:lighten($colour-font-on-light-bg,20%);}
+    &--regular{
+        font-size:20px;
+        position:absolute;
+        visibility:visible;
+        color:none;
+        &:hover{
+        visibility:hidden;
+        }
+    }
+    &--solid{
+        font-size:20px;
+        opacity:0;
+        position:absolute;
+        &:hover{
+            opacity:1; 
+            transition-duration:1.5s;
+        }
+    }
+}
+.coloredheart {
+    background: -webkit-gradient(linear, right top, left bottom, from($colour-primary), to($colour-secondary));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

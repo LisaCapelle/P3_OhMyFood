@@ -8,6 +8,36 @@ h2, h3, h4, p, ul, li, i, span {
   font-family: "Roboto", sans-serif;
 }
 
+.style-bold {
+  align-self: center;
+  font-size: 18px;
+  max-width: 170px;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+a:link {
+  text-decoration: none;
+  color: #000;
+}
+
+a:active {
+  text-decoration: none;
+  color: #000;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
 .home-page h2 {
   font-size: 20px;
   font-weight: 700;
@@ -66,34 +96,8 @@ h2, h3, h4, p, ul, li, i, span {
   font-size: 13px;
 }
 
-.style-bold {
-  align-self: center;
-  font-size: 18px;
-  max-width: 170px;
-  text-align: center;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-a:link {
-  text-decoration: none;
-  color: #000;
-}
-
-a:active {
-  text-decoration: none;
-  color: #000;
-}
-
-a:visited {
-  text-decoration: none;
-  color: #000;
-}
-
-a:hover {
-  cursor: pointer;
-  text-decoration: none;
-  color: #000;
+.return-icon {
+  color: #333333;
 }
 
 .btn-action {
@@ -142,15 +146,27 @@ a:hover {
 .like--regular {
   font-size: 20px;
   position: absolute;
+  visibility: visible;
+  color: none;
+}
+.like--regular:hover {
+  visibility: hidden;
 }
 .like--solid {
   font-size: 20px;
+  opacity: 0;
   position: absolute;
-  color: #9356DC;
+}
+.like--solid:hover {
+  opacity: 1;
+  transition-duration: 1.5s;
 }
 
-.return-icon {
-  color: #333333;
+.coloredheart {
+  background: -webkit-gradient(linear, right top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header {
@@ -308,8 +324,8 @@ footer {
 }
 
 .loading-spinner {
-  -webkit-animation: hide 0s ease-in 2s;
-          animation: hide 0s ease-in 2s;
+  -webkit-animation: hide 1s ease-in-out 2s;
+          animation: hide 1s ease-in-out 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -329,10 +345,28 @@ footer {
     height: 0;
   }
 }
+@-webkit-keyframes hidetemporarily {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes hidetemporarily {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .home-page {
   width: 100%;
   max-width: 1019px;
   margin: auto;
+  -webkit-animation: hidetemporarily 3s ease-in backwards;
+          animation: hidetemporarily 3s ease-in backwards;
 }
 .home-page .return-icon {
   display: none;
@@ -471,14 +505,6 @@ footer {
   padding: 7px 0;
   background-color: #fff;
   box-shadow: 2px 5px 5px #dddddd;
-}
-.card__description.like--regular {
-  font-size: 20px;
-  position: absolute;
-}
-.card__description.like--solid {
-  font-size: 20px;
-  position: absolute;
 }
 
 .restaurant__description {
@@ -694,16 +720,88 @@ footer {
   font-weight: 700;
 }
 
-.dish-description:hover > .dish-choose-icon {
-  display: inline-block;
+.dish-description:hover {
+  cursor: pointer;
+  margin-right: 0;
 }
-.dish-description:hover > h4, .dish-description:hover p {
-  max-width: 180px;
+.dish-description:hover > .dish-choose-icon {
+  width: 30px;
+  border-radius: 0 20px 20px 0;
+  transition: width 1s;
+}
+.dish-description:hover > .dish-choose-icon > .rotate {
+  -webkit-animation: roll-in linear forwards;
+          animation: roll-in linear forwards;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+.dish-description:hover > .dish-name h4, .dish-description:hover p {
+  max-width: 190px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 0;
+}
+.dish-description:hover > .dish-price {
+  padding-right: 5px;
 }
 
+@-webkit-keyframes roll-in {
+  0% {
+    right: -15px;
+    opacity: 0;
+    transform: rotate(0deg);
+    border-radius: 50px;
+    object-fit: contain;
+  }
+  25% {
+    right: -7px;
+    opacity: 0.5;
+    transform: rotate(90deg);
+    border-radius: 50px;
+    object-fit: contain;
+  }
+  75% {
+    right: -3px;
+    transform: rotate(180deg);
+    object-fit: contain;
+  }
+  100% {
+    right: 0px;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes roll-in {
+  0% {
+    right: -15px;
+    opacity: 0;
+    transform: rotate(0deg);
+    border-radius: 50px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  25% {
+    right: -7px;
+    opacity: 0.5;
+    transform: rotate(90deg);
+    border-radius: 50px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  75% {
+    right: -3px;
+    transform: rotate(180deg);
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  100% {
+    right: 0px;
+    transform: rotate(360deg);
+  }
+}
 .dish-name {
   display: flex;
   flex-direction: column;
@@ -719,13 +817,10 @@ footer {
 }
 
 .dish-choose-icon {
-  padding: 20px 18px;
+  width: 0px;
+  height: 30px;
   background-color: #99E2D0;
-  border-radius: 0 20px 20px 0;
   color: white;
-  display: none;
-}
-
-.dish-choose-icon:hover {
-  display: inline-block;
+  position: relative;
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
