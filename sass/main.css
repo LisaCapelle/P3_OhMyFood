@@ -589,86 +589,10 @@ footer {
   }
 }
 
-.dish-category > h3:before {
-  position: absolute;
-  left: 10px;
-  top: 20px;
-  height: 0;
-  width: 40px;
-  content: "";
-  border-top: 3px solid #99E2D0;
+.name {
+  font-size: 25px;
 }
 
-@media screen and (min-width: 600px) {
-  .wrap {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.menus:nth-child(1) {
-  position: relative;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.menus:nth-child(2) {
-  position: relative;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-.menus:nth-child(3) {
-  position: relative;
-  -webkit-animation-name: appear;
-          animation-name: appear;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes appear {
-  0% {
-    top: 70px;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes appear {
-  0% {
-    top: 70px;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
 .dishes {
   background-color: #f6f6f6;
   padding-bottom: 50px;
@@ -677,10 +601,6 @@ footer {
   width: 120px;
   margin-right: auto;
   margin-left: auto;
-}
-
-.name {
-  font-size: 25px;
 }
 
 .like {
@@ -722,44 +642,135 @@ footer {
     justify-content: center;
   }
 }
-
-.dish-description {
-  display: flex;
-  justify-content: space-between;
-  height: 60px;
-  width: 350px;
-  background-color: white;
-  border-radius: 20px;
-  margin: 0 10px 15px;
+.dish-category > h3:before {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  height: 0;
+  width: 40px;
+  content: "";
+  border-top: 3px solid #99E2D0;
 }
-.dish-description > .dish-price > p {
+
+@media screen and (min-width: 600px) {
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.menus:nth-child(1) {
+  position: relative;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menus:nth-child(2) {
+  position: relative;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 2.4s;
+          animation-duration: 2.4s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menus:nth-child(3) {
+  position: relative;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-duration: 3.6s;
+          animation-duration: 3.6s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    top: 70px;
+    opacity: 0;
+  }
+  80% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    top: 70px;
+    opacity: 0;
+  }
+  80% {
+    top: 20px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+.dish-name {
+  width: 280px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.dish-name > h4 {
+  padding: 10px 0 0 10px;
+  margin: 0;
+}
+.dish-name > p {
+  padding: 2px 0 10px 10px;
+  margin: 0;
+}
+
+.dish-price {
+  width: 40px;
+  height: 60px;
+  display: flex;
+  align-items: end;
+}
+.dish-price > p {
   font-weight: 700;
 }
 
-.dish-description:hover {
-  cursor: pointer;
-}
-.dish-description:hover > .dish-choose-icon {
-  width: 40px;
+.dish-choose-icon {
+  width: 0;
+  line-height: 60px;
+  background-color: #99E2D0;
+  color: white;
   border-radius: 0 20px 20px 0;
-  transition: width 1s;
-}
-.dish-description:hover > .dish-name h4, .dish-description:hover p {
-  max-width: 190px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 0;
-}
-.dish-description:hover > .dish-price {
-  padding-right: 5px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: baseline;
 }
 
 .rot {
+  width: 50px;
+  height: 60px;
+  position: relative;
+}
+
+.dish-description:hover .rot {
   -webkit-animation: roll-in linear forwards;
           animation: roll-in linear forwards;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -767,8 +778,6 @@ footer {
 @-webkit-keyframes roll-in {
   0% {
     transform: rotate(0deg);
-    border-radius: 50px;
-    object-fit: contain;
   }
   25% {
     transform: rotate(90deg);
@@ -784,9 +793,6 @@ footer {
 @keyframes roll-in {
   0% {
     transform: rotate(0deg);
-    border-radius: 50px;
-    -o-object-fit: contain;
-       object-fit: contain;
   }
   25% {
     transform: rotate(90deg);
@@ -798,24 +804,34 @@ footer {
     transform: rotate(360deg);
   }
 }
-.dish-name {
+.dish-description {
+  width: 350px;
+  height: 60px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: baseline;
-}
-.dish-name > h4 {
-  padding: 10px 0 0 10px;
-}
-.dish-name > p {
-  padding: 2px 0 10px 10px;
-  margin: 0;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 10px 15px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.dish-choose-icon {
-  width: 0px;
-  height: 60px;
-  background-color: #99E2D0;
-  color: white;
+.dish-description:hover {
+  cursor: pointer;
+}
+.dish-description:hover > .dish-name {
+  width: 230px;
+  transition: width 0.5s ease-out;
+}
+.dish-description:hover > .dish-name h4, .dish-description:hover > .dish-name p {
+  width: 230px;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 0;
+}
+.dish-description:hover > .dish-choose-icon {
+  width: 50px;
+  transition: width 0.5s ease-out;
 }/*# sourceMappingURL=main.css.map */

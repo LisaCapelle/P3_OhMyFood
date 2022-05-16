@@ -1,4 +1,4 @@
-// ALL 
+// ALL MENU PAGES 
 .menu-page{
     width:100%;
     max-width:1019px;
@@ -15,7 +15,7 @@
     position:relative; 
     justify-content: flex-start;
 }
-//PRESENTATION
+//PRESENTATION BELOW HEADER WIDTH MENU TITLE
 #presentation{
     z-index:1;
 }
@@ -36,56 +36,9 @@
         justify-content:center;
     }
 }
-// DISHES
-.dish-category{
-    > h3:before{
-    position: absolute;
-    left: 10px;
-    top: 20px;
-    height: 0;
-    width: 40px;
-    content: '';
-    border-top: 3px solid $colour-tertiary;
-    }
-}
-.wrap{
-    @include tablet{display:flex; flex-wrap:wrap;
-    }
-}
-.menus:nth-child(1){
-    position:relative;
-    animation-name:appear;
-    animation-duration:3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-.menus:nth-child(2){
-    position:relative;
-    animation-name:appear;
-    animation-duration:2.5s;
-    animation-delay:1s;
-    animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-.menus:nth-child(3){
-    position:relative;
-    animation-name:appear;
-    animation-duration:2s;
-    animation-delay:2s;
-    animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-@keyframes appear{
-    0%{
-        top:70px;
-        opacity: 0;
-    }
-    100%{
-        top:0;
-        opacity: 1;
-    }
+// DISHES SECTION GENERAL LAYOUT
+.name{
+    font-size:25px;
 }
 .dishes{
     background-color:nth($background-colour,1);
@@ -95,9 +48,6 @@
         margin-right:auto;
         margin-left:auto;
     }
-}
-.name{
-    font-size:25px;
 }
 .like{
     cursor: pointer;
@@ -111,6 +61,7 @@
         position:absolute;
     }
 }
+// MENUS
 .menus{
     max-width:400px;
     list-style:none;
@@ -121,6 +72,7 @@
         margin-top:0
     };
 }
+
 .dish-category{
     background-color:nth($background-colour,1);
     margin:0;
@@ -128,85 +80,151 @@
     @include tablet{
         display:flex; justify-content:center;
     };
+    > h3:before{
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    height: 0;
+    width: 40px;
+    content: '';
+    border-top: 3px solid $colour-tertiary;
+    }
 }
-.dish-description{
+   
+.wrap{
+    @include tablet{display:flex; flex-wrap:wrap;
+    }
+}
+// MENUS ANIMATION
+.menus:nth-child(1){
+    position:relative;
+    animation-name:appear;
+    animation-duration:1.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.menus:nth-child(2){
+    position:relative;
+    animation-name:appear;
+    animation-duration:2.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.menus:nth-child(3){
+    position:relative;
+    animation-name:appear;
+    animation-duration:3.6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes appear{
+    0%{
+        top:70px;
+        opacity: 0;
+    }
+    80%{
+        top:20px;
+        opacity: 0;}
+    100%{
+        top:0;
+        opacity: 1;
+    }
+}
+
+// MENU ITEMS & ANIMATION MENU APPEAR
+
+.dish-name{
+    width: 280px;
+    height: 60px;
     display:flex;
-    // align-items:flex-end;
-    justify-content:space-between;
-    height:60px;
-    width:350px;
-    background-color: white;
-    border-radius:20px;
-    margin:0 10px 15px;
-    > .dish-price{
-        // padding-right:20px;
-    > p{
-        font-weight:700;}
-   }
+    flex-direction:column;
+    >h4 {
+        padding:10px 0 0 10px; 
+        margin:0;
+    }
+    >p {
+        padding:2px 0 10px 10px; 
+        margin:0;
+    }
 }
-.dish-description:hover{
-    cursor:pointer;
-    > .dish-choose-icon{
-        // display:inline-block;
-        width:40px;
-        border-radius:0 20px 20px 0;
-        transition: width 1s;
+.dish-price {
+    width: 40px;
+    height:60px;
+    display:flex;
+    align-items:end;
+    > p{
+        font-weight:700;
     }
-    > .dish-name h4, p {
-        max-width:190px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow:ellipsis;
-        padding-right:0;
-    }
-    > .dish-price {
-        padding-right:5px;
-    }
+}
+.dish-choose-icon{
+    width:0;
+    line-height:60px;
+    background-color:$colour-tertiary;
+    color:white;
+    border-radius:0 20px 20px 0;
+    display:inline-block;
+    text-align:center;
+    vertical-align:baseline;
 }
 .rot{
+width:50px;
+height:60px;
+position:relative;
+}
+
+// ANIMATION CHECK-BOX ROTATION
+.dish-description:hover{
+    .rot{
     animation: roll-in linear forwards;
-    animation-duration:0.5s;
+    animation-duration:0.4s;
     animation-iteration-count:1;
+    }
 }
 
 @keyframes roll-in{
     0%{
-        // right:-7px;
         transform:rotate(0deg);
-        border-radius:50px;
-        object-fit:contain;
     }
     25%{
-        // right:-5px;
         transform:rotate(90deg);
     }
     75%{
-        // right:-2px;
         transform:rotate(180deg);
     }
     100%{
-        // right:0px;
         transform:rotate(360deg);
     }
 }
-.dish-name{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:baseline;
-    >h4 {padding:10px 0 0 10px;}
-    > p {padding:2px 0 10px 10px; margin:0;}
-}
-.dish-choose-icon{
-    width:0px;
+
+// ANIMATION DISH-DESCRIPTION COLLAPSE
+.dish-description{  
+    width:350px;
     height:60px;
-    // padding:20px 18px;
-    background-color:$colour-tertiary;
-    color:white;
-    // margin:auto;
-    // text-align:center;
-    // vertical-align:center;
-    // position:relative;
-    // display:none;
-    overflow:hidden;
+    display:flex;
+    justify-content:space-between;
+    background-color: white;
+    border-radius:20px;
+    margin:0 10px 15px;
+    position:relative;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.dish-description:hover{
+    cursor:pointer;
+    >.dish-name{
+    width:230px;
+    transition: width 0.5s ease-out;
+        h4, p {
+        width:230px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        padding-right:0;
+        }
+    }
+    >.dish-choose-icon{
+        width:50px;
+        transition: width 0.5s ease-out;
+    }
 }
