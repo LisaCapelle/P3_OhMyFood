@@ -4,19 +4,21 @@
 .return-icon{
     color:lighten($colour-font-on-light-bg,20%);
 }
-// BUTTON-ACTION ON ALL PAGES 
+
+// BUTTON-ACTION FOR ALL PAGES 
 .btn-action{
     text-align:center;
     padding: 10px;
     border-radius: 20px;
     background: linear-gradient($colour-secondary, $colour-primary);
     color:$colour-font-on-dark-bg;
-    box-shadow: 2px 2px 3px 1px darken(nth($background-colour,2),10%);}
-.btn-action:hover{
-    cursor: pointer;
-    box-shadow: 7px 7px 7px darken(nth($background-colour,2),30%);
+    box-shadow: 2px 2px 3px 1px darken(nth($background-colour,2),10%);
+    &:hover{
+        cursor:pointer;
+        box-shadow: 7px 7px 7px darken(nth($background-colour,2),30%);
+    }
 }
-// BUTTON-STEP ON HOMEPAGE 
+// BUTTON-STEP FOR HOMEPAGE 
 .btn-step{
     margin:auto;
     display:flex;
@@ -26,16 +28,18 @@
     position:relative;
     border-radius:20px;
     background-color: nth($background-colour,1);
-    box-shadow: 2px 5px 5px darken(nth($background-colour,1),10%);}
-    
-.btn-step:hover{
-    cursor: pointer;
-    box-shadow: 7px 7px 7px darken(nth($background-colour,1),30%);
-    background-color:lighten($colour-primary,36%);}
-.btn-step:hover{
-    color:$colour-secondary;}
+    box-shadow: 2px 5px 5px darken(nth($background-colour,1),10%);
+    &:hover{
+        cursor: pointer;
+        box-shadow: 7px 7px 7px darken(nth($background-colour,1),30%);
+        background-color:lighten($colour-primary,36%);
+        .colored{
+                color:$colour-primary;
+        }
+    }
+}
 
-// BUTTONS LIKE ON ALL PAGES 
+// LIKE BUTTONS FOR ALL PAGES 
 .like{
     display:flex;
     align-items:center;
