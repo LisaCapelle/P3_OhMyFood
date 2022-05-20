@@ -3,24 +3,7 @@
 @mixin tablet{
     @media screen and (min-width:map-get($breakpoints, tablet)) {@content;}
 }
+
 @mixin desktop{
     @media screen and (min-width:map-get($breakpoints, desktop)) {@content;}
 }
-// @mixin hover-box-shadow ($color:nth($background-colour,2), $size: 7px 7px 7px 1px) {
-//     box-shadow:$size darken($color:30%);}
-
-// @mixin hover-background-color ($color:nth($background-colour,1)) {
-//         background-color: lighten($color:20%);}
-
-// @mixin theme-colors ($light-theme:true){
-//     @if light-theme {background-color:$background-colour lightness<25%}
-//     background-color
-// }
-
-// $background-colour: #f6f6f6, #eaeaea, #f5edff, #353535, #535151;
-// $block:(h1:Shrikhand, logo:Shrikhand, h2:Roboto, name:Shrikhand,);
-
-// @mixin text-colour ($colour) {
-//     @if (lightness($colour)<25%){$colour:$colour-font-on-light-bg;}
-//     @else {color:colour-font-on-light-bg;}
-// }

@@ -144,7 +144,6 @@ a:hover {
   font-size: 20px;
   position: absolute;
   visibility: visible;
-  color: none;
 }
 .like--regular:hover {
   visibility: hidden;
@@ -720,8 +719,21 @@ footer {
     opacity: 1;
   }
 }
+.dish-description {
+  width: 350px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 10px 15px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .dish-name {
-  width: 280px;
   height: 60px;
   display: flex;
   flex-direction: column;
@@ -729,10 +741,16 @@ footer {
 .dish-name > h4 {
   padding: 10px 0 0 10px;
   margin: 0;
+  width: 230px;
+  transition-property: width;
+  transition-duration: 0.5s;
 }
 .dish-name > p {
   padding: 2px 0 10px 10px;
   margin: 0;
+  width: 230px;
+  transition-property: width;
+  transition-duration: 0.5s;
 }
 
 .dish-price {
@@ -763,10 +781,8 @@ footer {
 }
 
 .dish-description:hover .rot {
-  -webkit-animation: roll-in infinite linear forwards;
-          animation: roll-in infinite linear forwards;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
+  -webkit-animation: roll-in 0.5s linear forwards;
+          animation: roll-in 0.5s linear forwards;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -794,35 +810,17 @@ footer {
     transform: rotate(360deg);
   }
 }
-.dish-description {
-  width: 350px;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  background-color: white;
-  border-radius: 20px;
-  margin: 0 10px 15px;
-  position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .dish-description:hover {
   cursor: pointer;
 }
-.dish-description:hover > .dish-name {
-  width: 230px;
-  transition: width 2s linear;
-}
 .dish-description:hover > .dish-name > h4, .dish-description:hover > .dish-name > p {
   width: 200px;
-  transition: width 2s linear;
-  white-space: nowrap;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
   padding-right: 0;
 }
 .dish-description:hover > .dish-choose-icon {
   width: 50px;
-  transition: width 2s linear;
+  transition: width 0.5s linear;
 }/*# sourceMappingURL=main.css.map */

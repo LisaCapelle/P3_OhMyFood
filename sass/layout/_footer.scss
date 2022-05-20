@@ -25,15 +25,29 @@ footer{
 }
 .footer__list{
  list-style-type:none;
-    a:link {color:white;};
-    a:hover{color:white;};
-    a:active{color:white;};
-    a:visited{color:white;};        }
+    a:link {
+        color:white;
+    };
+    a:hover{
+        color:white;
+    };
+    a:active{
+        color:white;
+    };
+    a:visited{
+        color:white;
+    };        
+}
 
 .footer__list-link{
     vertical-align:baseline;padding:1px;
-    > .fa-solid {font-size:10px; padding-right:3px;}
-    > a, span{font-weight:100;
-        @include tablet{padding-right:25px;}}
-    
-       }
+    > .fa-solid {
+        font-size:10px; padding-right:3px;
+    }
+    > a, span{
+        font-weight:100;
+        @include tablet{
+            padding-right:25px;
+        }
+    }
+}

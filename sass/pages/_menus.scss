@@ -15,7 +15,7 @@
     position:relative; 
     justify-content: flex-start;
 }
-//PRESENTATION BELOW HEADER WIDTH MENU TITLE
+//PRESENTATION BELOW HEADER WITH MENU TITLE
 #presentation{
     z-index:1;
 }
@@ -90,12 +90,11 @@
     border-top: 3px solid $colour-tertiary;
     }
 }
-   
 .wrap{
     @include tablet{display:flex; flex-wrap:wrap;
     }
 }
-// MENUS ANIMATION
+// MENUS APPEARANCE ANIMATION
 .menus:nth-child(1){
     position:relative;
     animation-name:appear;
@@ -131,20 +130,38 @@
     }
 }
 
-// MENU ITEMS & ANIMATION MENU APPEAR
+// MENU ITEMS & ANIMATION CHECK ITEM APPEARANCE
+.dish-description{  
+    width:350px;
+    height:60px;
+    display:flex;
+    justify-content:space-between;
+    background-color: white;
+    border-radius:20px;
+    margin:0 10px 15px;
+    position:relative;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
 
 .dish-name{
-    width: 280px;
     height: 60px;
     display:flex;
     flex-direction:column;
     >h4 {
         padding:10px 0 0 10px; 
         margin:0;
-    }
+        width: 230px;
+        transition-property:width;
+        transition-duration:0.5s;
+       }
     >p {
         padding:2px 0 10px 10px; 
         margin:0;
+        width: 230px;
+        transition-property:width;
+        transition-duration:0.5s;
     }
 }
 .dish-price {
@@ -175,68 +192,37 @@ position:relative;
 // ANIMATION CHECK-BOX ROTATION
 .dish-description:hover{
     .rot{
-    animation: roll-in infinite linear forwards;
-    animation-duration:0.4s;
+    animation: roll-in 0.5s linear forwards;
     animation-iteration-count:1;
     }
 }
-
 @keyframes roll-in{
     0%{
-        // width: 10px; 
-        // height:10px;
         transform:rotate(0deg);
     }
     50%{
-        // width: 10px; 
-        // height:10px;
         transform:rotate(180deg);
     }
     100%{
-        // width: 10px; 
-        // height:10px;
         transform:rotate(360deg);
     }
 }
 
 // ANIMATION DISH-DESCRIPTION COLLAPSE
-.dish-description{  
-    width:350px;
-    height:60px;
-    display:flex;
-    justify-content:space-between;
-    background-color: white;
-    border-radius:20px;
-    margin:0 10px 15px;
-    position:relative;
-    overflow: hidden;
-    text-overflow:ellipsis;
-}
 
 .dish-description:hover{
     cursor:pointer;
     >.dish-name{
-        width:230px;
-        transition: width 2s linear;
         > h4, > p{      
-        width:200px;
-        transition: width 2s linear;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow:ellipsis;
-        padding-right:0;
+            width:200px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            padding-right:0;
         }
-        // > p{      
-        //     width:230px;
-        //     transition: width 0.5s linear;
-        //     white-space: nowrap;
-        //     overflow: hidden;
-        //     text-overflow:ellipsis;
-        //     padding-right:0;
-        //     }
     }
     >.dish-choose-icon{
         width:50px;
-        transition: width 2s linear;
+        transition: width 0.5s linear;
     }
 }
