@@ -98,21 +98,21 @@
 .menus:nth-child(1){
     position:relative;
     animation-name:appear;
-    animation-duration:1.2s;
+    animation-duration:0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 .menus:nth-child(2){
     position:relative;
     animation-name:appear;
-    animation-duration:2.4s;
+    animation-duration:1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 .menus:nth-child(3){
     position:relative;
     animation-name:appear;
-    animation-duration:3.6s;
+    animation-duration:1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
