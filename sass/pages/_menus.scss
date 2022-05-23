@@ -180,19 +180,20 @@
     color:white;
     border-radius:0 20px 20px 0;
     display:inline-block;
-    text-align:center;
-    vertical-align:baseline;
 }
+.rotate{
+    width:10px;
+    height:10px;
+    padding-left:18px; 
+    margin:0;
+    }
 .rot{
-width:10px;
-height:10px;
-position:relative;
+    vertical-align:center;
 }
-
 // ANIMATION CHECK-BOX ROTATION
 .dish-description:hover{
     .rot{
-    animation: roll-in 0.5s linear forwards;
+    animation: roll-in 0.6s linear forwards;
     animation-iteration-count:1;
     }
 }
@@ -200,10 +201,20 @@ position:relative;
     0%{
         transform:rotate(0deg);
     }
+    25%{
+        top:50%;
+        transform:rotate(90deg);
+    }
     50%{
+        top:50%;
         transform:rotate(180deg);
     }
+    75%{
+        top:50%;
+        transform:rotate(240deg);
+    }
     100%{
+        top:50%;
         transform:rotate(360deg);
     }
 }
